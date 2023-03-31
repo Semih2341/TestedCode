@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string str = "The weather is so sunny nowadays"; //Any sentence you want to reverse
+        string reversed = ReverseString(str); //Calls function which you can find at down
+        Console.WriteLine(reversed); //Writing the output on console
+    }
+
+
+    static string ReverseString(string str)
+    {
+        string[] words = str.Split(' '); // taking apart of the sentence when seeing" " 
+        Array.Reverse(words); // get last to first in an array
+        string reversed = string.Join(' ', words); //creating new sentence with join words in array
+        return reversed;
+    }
+}
